@@ -15,6 +15,13 @@ async def on_ready():
 	print("Ready...")
 
 
+@bot.command(hidden = True, pass_context=True)
+async def end(ctx):
+	if await bot.is_owner(ctx.message.author):
+		print("\nGoing to sleep...\n")
+		await bot.logout()
+
+
 @bot.command(hidden = True)
 @has_permissions(administrator=True)
 async def reload(ctx, extension):
