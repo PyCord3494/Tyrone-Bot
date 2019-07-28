@@ -4,8 +4,8 @@ from discord.ext.commands import has_permissions
 
 import ztoken
 
-bot = commands.Bot(command_prefix = "1qaz")
-extensions = []
+bot = commands.Bot(command_prefix = ".")
+extensions = ["cogs.roles"]
 
 
 @bot.event
